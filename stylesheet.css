@@ -140,3 +140,26 @@ span.highlight {
     display: inline-block;
     border-radius: 10px;
 }
+
+.one {
+  position: relative;
+  overflow: hidden;   
+  border-radius: 12px;
+}
+
+.ever {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: blur(4px);
+  transition: filter .3s ease;
+}
+
+.one:hover .ever,
+.one:focus-within .ever {
+  filter: blur(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ever { transition: none; }
+}
