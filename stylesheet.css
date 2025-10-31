@@ -81,7 +81,8 @@ tr,
 p,
 a {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 16.1px;
+  line-height: 1.6;
 }
 
 strong {
@@ -93,12 +94,12 @@ h2 {
   margin: 0;
   font-weight: normal;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
+  font-size: 24px;
 }
 
 .papertitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 16.3px;
   font-weight: 700;
 }
 
@@ -141,17 +142,34 @@ span.highlight {
     border-radius: 10px;
 }
 
+.profile-pic {
+  max-width: 250px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+@media (max-width: 640px) {
+  .profile-pic { max-width: 140px; }
+}
+
+
 .one {
   position: relative;
   overflow: hidden;   
-  border-radius: 12px;
+  width: 100%;
+  height: auto;
+  overflow: visible;
 }
 
 .ever {
   display: block;
   width: 100%;
   height: auto;
-  filter: blur(4px);
+  object-fit: cover;
+  /* filter: blur(4px); */
   transition: filter .3s ease;
 }
 
@@ -163,3 +181,34 @@ span.highlight {
 @media (prefers-reduced-motion: reduce) {
   .ever { transition: none; }
 }
+
+table[style*="border-spacing:0px 10px"] td:first-child {
+  width: 42% !important;
+  max-width: 42% !important;
+  padding-right: 40px !important;
+  vertical-align: middle !important;
+}
+table[style*="border-spacing:0px 10px"] td:last-child {
+  width: 58% !important;
+  max-width: 58% !important;
+  padding-left: 0 !important;
+  text-align: left !important;
+  vertical-align: middle !important;
+}
+
+table[style*="border-spacing:0px 10px"] td {
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+}
+table[style*="border-spacing:0px 10px"] td:last-child p {
+  margin: 0 !important;
+}
+
+.one { max-width: none; }
+.ever { width: 100%; height: auto; }
+
+.equal-note {
+  font-size: 0.9em;
+  font-style: italic;
+}
+
