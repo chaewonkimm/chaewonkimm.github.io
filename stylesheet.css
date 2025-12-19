@@ -85,16 +85,17 @@ a {
   line-height: 1.6;
 }
 
-strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+strong{
+  font-size: inherit;
+  font-weight: 700;
 }
+
 
 h2 {
   margin: 0;
   font-weight: normal;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 24px;
+  font-size: 25px;
 }
 
 .papertitle {
@@ -210,5 +211,122 @@ table[style*="border-spacing:0px 10px"] td:last-child p {
 .equal-note {
   font-size: 0.9em;
   font-style: italic;
+}
+
+.pub-links{
+  position: relative;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.pub-btn{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #1772d0;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 1;
+
+  padding: 4px 6px;
+  border-radius: 10px;
+
+  background: rgba(145, 194, 243, 0.12);
+  position: relative;
+  transition: background 140ms ease, transform 140ms ease, color 140ms ease;
+}
+
+a.pub-btn i{
+  font-size: 16px;
+  line-height: 1;
+  color: inherit;
+  opacity: 0.95;
+  transition: opacity 140ms ease;
+}
+
+a.pub-btn::after{
+  content: "";
+  position: absolute;
+  left: 6px;
+  right: 6px;
+  bottom: -3px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 999px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 160ms ease;
+  opacity: 0.35;
+}
+
+a.pub-btn:hover{
+  color: #f09228;
+  background: rgba(240,146,40,0.08);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+a.pub-btn:hover i{ opacity: 1; }
+
+a.pub-btn:hover::after{
+  transform: scaleX(1);
+}
+
+a.pub-btn:focus-visible{
+  outline: 3px solid rgba(23,114,208,0.25);
+  outline-offset: 2px;
+}
+
+.pub-links a.pub-btn:first-child{
+  position: relative;
+  margin-right: 10px;
+}
+
+.pub-links a.pub-btn:first-child::before{
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 18px;
+  background: rgba(17, 24, 39, 0.16);
+  border-radius: 999px;
+}
+
+.pub-btn--disabled{
+  cursor: default;
+  user-select: none;
+}
+
+.pub-soon{
+  margin-left: 0.5px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: rgba(17,24,39,0.08);
+  color: rgba(17,24,39,0.55);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+
+p{
+  margin: 0 0 0.9em 0;
+}
+
+ul{
+  margin: 0.4em 0 0.9em 1.2em;
+}
+
+p.sofar{
+  margin-bottom: 0.25em;
+}
+
+p.sofar + ul{
+  margin-top: 0;
 }
 
