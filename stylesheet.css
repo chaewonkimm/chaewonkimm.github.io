@@ -330,23 +330,25 @@ p.sofar + ul{
   margin-top: 0;
 }
 
-.awards, .awards ul {
+.awards{
   margin: 0;
   padding-left: 1.2rem;
+  line-height: 1.6;
 }
 
 .awards > li{
   margin: 8px 0;
 }
 
-.awards > li > ul{
-  margin-top: 6px;
+.award-org{
+  margin: 2px 0 0; 
   padding-left: 1.2rem;
-}
-
-.awards > li > ul > li{
-  margin: 8px 0;
   list-style: circle;
 }
+
+.award-org > li{
+  margin: 0;
+}
+
 
 
