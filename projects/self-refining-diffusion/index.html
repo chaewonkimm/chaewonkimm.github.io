@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Self-Refining Diffusion — Chaewon Kim</title>
+
+  <link rel="stylesheet" href="../../stylesheet.css" />
+
+  <!-- Font Awesome (needed for icons on this page, too) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        referrerpolicy="no-referrer" />
+
+  <style>
+    /* Minimal page layout (keeps your global typography) */
+    .project-wrap{
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 26px 16px 40px;
+    }
+    .project-top{
+      margin-bottom: 16px;
+    }
+    .project-title{
+      margin: 6px 0 6px;
+      line-height: 1.25;
+    }
+    .project-meta{
+      margin: 0 0 10px;
+    }
+    .project-figure{
+      margin: 12px 0 6px;
+    }
+    .project-figure img{
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+    }
+    .caption{
+      margin-top: 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="project-wrap">
+    <div class="project-top">
+      <p style="margin:0 0 10px;">
+        <a href="../../">&larr; Back to Home</a>
+      </p>
+
+      <h2 class="project-title">Refining Visual Artifacts in Diffusion Models via Explainable AI-based Flaw Activation Maps</h2>
+
+      <p class="project-meta">
+        Seoyeon Lee*, Gwangyeol Yu*, <strong>Chaewon Kim*</strong>, Jonghyuk Park
+        <br>
+        <em>[Under review] <span class="equal-note">(* Equal contribution)</span></em>
+      </p>
+
+      <span class="pub-links">
+        <a class="pub-btn" href="https://arxiv.org/abs/2512.08774" target="_blank" rel="noopener noreferrer">
+          <i class="fa-regular fa-file-lines" aria-hidden="true"></i> Paper
+        </a>
+
+        <span class="pub-btn pub-btn--disabled" aria-disabled="true" title="Code will be released soon">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+          Code <span class="pub-soon">Soon</span>
+        </span>
+      </span>
+    </div>
+
+    <h2>Overview</h2>
+    <p class="overview-text">
+      Even strong diffusion models often produce artifacts and unrealistic regions that conflict with human perception and physical plausibility (e.g., object overlap, geometric distortions, and implausible textures).
+      We aim to make diffusion-based generation more <strong>human-aligned</strong> by identifying these flawed regions and improving overall image quality.
+      We propose <strong>Self-Refining Diffusion</strong>, which uses <strong>Flaw Activation Maps (FAMs)</strong> to localize flawed regions and refine them by amplifying noise in those regions and reweighting attention during denoising to focus corrections where they matter most.
+      Across diverse diffusion models, datasets, and tasks (generation, text-to-image, and inpainting), our method improves FID by up to <strong>27.3%</strong>.
+    </p>
+
+    <br>
+
+    <figure class="project-figure">
+      <img
+        src="../../images/diffusion.jpg"
+        alt="Training structure of the proposed self-refining diffusion framework"
+        loading="lazy"
+      />
+      <figcaption class="caption">
+        <strong>Figure.</strong> Training structure of the proposed self-refining diffusion framework.
+      </figcaption>
+    </figure>
+
+
+  </div>
+</body>
+</html>

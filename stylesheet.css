@@ -283,19 +283,23 @@ a.pub-btn:focus-visible{
 
 .pub-links a.pub-btn:first-child{
   position: relative;
-  margin-right: 10px;
+  margin-right: 7px;
 }
 
-.pub-links a.pub-btn:first-child::before{
+.pub-links .pub-btn:not(:last-child)::before{
   content: "";
   position: absolute;
-  right: -10px;
+  right: -7px;
   top: 50%;
   transform: translateY(-50%);
   width: 1px;
   height: 18px;
   background: rgba(17, 24, 39, 0.16);
   border-radius: 999px;
+}
+
+.pub-links .pub-btn:not(:last-child){
+  margin-right: 7px;
 }
 
 .pub-btn--disabled{
@@ -351,4 +355,21 @@ p.sofar + ul{
 }
 
 
+.overview-text{
+  max-width: 980px;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
 
+.project-figure{
+  margin: 14px auto 6px;
+  max-width: 720px;
+}
+
+.project-figure img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}

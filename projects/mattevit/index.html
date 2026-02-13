@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Self-Refining Diffusion — Chaewon Kim</title>
+
+  <link rel="stylesheet" href="../../stylesheet.css" />
+
+  <!-- Font Awesome (needed for icons on this page, too) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        referrerpolicy="no-referrer" />
+
+  <style>
+    /* Minimal page layout (keeps your global typography) */
+    .project-wrap{
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 26px 16px 40px;
+    }
+    .project-top{
+      margin-bottom: 16px;
+    }
+    .project-title{
+      margin: 6px 0 6px;
+      line-height: 1.25;
+    }
+    .project-meta{
+      margin: 0 0 10px;
+    }
+    .project-figure{
+      margin: 12px 0 6px;
+    }
+    .project-figure img{
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      display: block;
+    }
+    .caption{
+      margin-top: 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="project-wrap">
+    <div class="project-top">
+      <p style="margin:0 0 10px;">
+        <a href="../../">&larr; Back to Home</a>
+      </p>
+
+      <h2 class="project-title">MatteViT: High-Frequency-Aware Document Shadow Removal with Shadow Matte Guidance</h2>
+
+      <p class="project-meta">
+        <strong>Chaewon Kim*</strong>, Seoyeon Lee, Jonghyuk Park
+        <br>
+        <em>[Under review] <span class="equal-note">(* Equal contribution)</span></em>
+      </p>
+
+      <span class="pub-links">
+        <a class="pub-btn" href="https://arxiv.org/abs/2512.08789" target="_blank" rel="noopener noreferrer">
+          <i class="fa-regular fa-file-lines" aria-hidden="true"></i> Paper
+        </a>
+
+        <a class="pub-btn" href="https://github.com/chaewonkimm/document-shadow-removal" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-github" aria-hidden="true"></i> Code
+        </a>
+      </span>
+    </div>
+
+    <h2>Overview</h2>
+    <p class="overview-text">
+      Document shadow removal methods often fail to remove shadows cleanly while preserving delicate fine structures such as thin strokes and edges. To address this, we propose <strong>MatteViT</strong>, which leverages both spatial and frequency-domain information to eliminate shadows while maintaining fine-grained structural details. Specifically, MatteViT introduces a continuous luminance-based <strong>shadow matte</strong> for precise spatial guidance and a <strong>lightweight High-Frequency Amplification Module (HFAM)</strong> to enhance high-frequency details during restoration. As a result, MatteViT achieves state-of-the-art performance on the RDD and Kligler benchmarks.
+    </p>
+
+    <br>
+
+    <figure class="project-figure">
+      <img
+        src="../../images/mattevit.jpg"
+        alt="Training structure of the proposed MatteViT framework"
+        loading="lazy"
+      />
+      <figcaption class="caption">
+        <strong>Figure.</strong> Overview of the proposed matte vision transformer (MatteViT) framework.
+      </figcaption>
+    </figure>
+
+
+  </div>
+</body>
+</html>
